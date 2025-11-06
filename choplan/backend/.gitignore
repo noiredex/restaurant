@@ -1,0 +1,43 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ / VSCode / Eclipse IDE 설정 파일
+*.iml
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Spring Boot
+out/
+bin/
+target/
+
+# 환경 변수 (DB 비밀번호 등)
+*.env
+
+# === Spring Boot 환경설정 파일 무시 ===
+*.properties
+*.yml
+*.yaml
+
+# === 환경 변수 파일 ===
+.env
+
+
+# Node.js (프론트엔드)
+frontend/node_modules/
+frontend/dist/
+
+# 기타 === VSCode Local History 완전 무시 ===
+.history/
+**/.history/**

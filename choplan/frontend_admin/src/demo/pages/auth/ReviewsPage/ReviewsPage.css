@@ -1,0 +1,402 @@
+/**
+ * 테스트용 리뷰 페이지 스타일 - 데모 종료 시 제거 예정
+ */
+.demo-reviews-page {
+  height: calc(100vh - 140px);
+  overflow: hidden;
+}
+
+.reviews-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  height: 100%;
+}
+
+.restaurants-sidebar {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.restaurants-sidebar h2 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.restaurants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.restaurant-item {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.restaurant-item:hover {
+  background: #f5f5f5;
+}
+
+.restaurant-item.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.restaurant-name {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.restaurant-region {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.reviews-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.restaurant-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.restaurant-detail-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.write-review-btn {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.write-review-btn:hover {
+  background: #5568d3;
+}
+
+.review-stats-box {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.review-write-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.review-write-form .form-group {
+  margin-bottom: 16px;
+}
+
+.review-write-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.rating-selector {
+  display: flex;
+  gap: 8px;
+  font-size: 32px;
+}
+
+.rating-selector .star {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.2s;
+}
+
+.rating-selector .star.active {
+  opacity: 1;
+}
+
+.rating-selector .star:hover {
+  transform: scale(1.2);
+}
+
+.review-write-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.review-write-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: #5568d3;
+}
+
+.restaurant-reviews h3 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.my-reviews-section h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.reviews-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.review-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.review-author,
+.review-restaurant {
+  font-weight: bold;
+  color: #333;
+}
+
+.review-rating {
+  font-size: 16px;
+}
+
+.review-content {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.review-images {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.review-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.review-image:hover {
+  transform: scale(1.05);
+  border-color: #667eea;
+}
+
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.review-footer small {
+  color: #999;
+  font-size: 12px;
+}
+
+.review-stats,
+.review-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.review-actions button {
+  padding: 6px 12px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.review-actions button:hover {
+  background: #e0e0e0;
+}
+
+.review-actions .report-btn {
+  color: #f44336;
+}
+
+/* 이미지 업로드 스타일 */
+.image-upload-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.image-upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.image-upload-btn:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+}
+
+.image-upload-btn:active {
+  transform: translateY(0);
+}
+
+.image-upload-hint {
+  font-size: 12px;
+  color: #999;
+}
+
+.uploaded-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.uploaded-image-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+}
+
+.uploaded-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.remove-image-btn:hover {
+  background: rgba(220, 53, 69, 0.8);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .reviews-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .restaurants-sidebar {
+    max-height: 200px;
+  }
+  
+  .uploaded-images {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+

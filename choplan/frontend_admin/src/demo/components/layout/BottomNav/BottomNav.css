@@ -1,0 +1,132 @@
+/**
+ * 공통 하단 네비게이션 바 스타일 - 통일된 디자인
+ */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+  z-index: 1002;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+}
+
+.bottom-nav button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 0 4px;
+  min-height: 60px;
+}
+
+.bottom-nav button:hover {
+  background: #f8f9fa;
+  color: #667eea;
+  transform: translateY(-1px);
+}
+
+.bottom-nav button.active {
+  color: #667eea;
+  background: #f8f9ff;
+  font-weight: 600;
+}
+
+
+.bottom-nav .nav-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* 데스크탑에서도 하단 고정 */
+@media (min-width: 769px) {
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 16px 0;
+  }
+  
+  .bottom-nav button {
+    min-height: 70px;
+    padding: 16px 12px;
+  }
+  
+  .bottom-nav .nav-label {
+    font-size: 13px;
+  }
+}
+
+/* 태블릿 */
+@media (min-width: 1024px) {
+  .bottom-nav {
+    padding: 20px 0;
+  }
+  
+  .bottom-nav button {
+    min-height: 80px;
+    padding: 20px 16px;
+  }
+  
+  .bottom-nav .nav-label {
+    font-size: 14px;
+  }
+}
+
+/* 모바일 최적화 */
+@media (max-width: 480px) {
+  .bottom-nav {
+    padding: 8px 0;
+  }
+  
+  .bottom-nav button {
+    min-height: 50px;
+    padding: 8px 4px;
+    margin: 0 2px;
+  }
+  
+  
+  .bottom-nav .nav-label {
+    font-size: 10px;
+  }
+}
+
+/* 최소 크기 보장 */
+@media (max-width: 320px) {
+  .bottom-nav {
+    padding: 6px 0;
+  }
+  
+  .bottom-nav button {
+    min-height: 45px;
+    padding: 6px 2px;
+    margin: 0 1px;
+  }
+  
+  
+  .bottom-nav .nav-label {
+    font-size: 9px;
+  }
+}

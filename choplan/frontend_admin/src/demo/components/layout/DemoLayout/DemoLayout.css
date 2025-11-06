@@ -1,0 +1,117 @@
+/**
+ * 테스트용 레이아웃 스타일 - 데모 종료 시 제거 예정
+ */
+.demo-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.demo-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.demo-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demo-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.demo-header-left h1 {
+  margin: 0;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.demo-header-left h1:hover {
+  transform: scale(1.05);
+}
+
+.demo-badge {
+  background: #ffd700;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.demo-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.demo-user-info {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-logout-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.demo-logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.demo-main {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 100px; /* 하단 네비게이션 공간 */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px; /* 상단 헤더와의 간격 */
+}
+
+/* OWNER 모드: 헤더 아래 전체 화면 사용 */
+.demo-main.owner-mode {
+  padding: 0;
+  max-width: none;
+  margin: 0;
+  height: calc(100vh - 60px); /* 헤더 높이만큼 빼기 */
+  overflow: hidden;
+}
+
+/* 하단 네비게이션은 공통 BottomNav 컴포넌트 사용 */
+
+@media (max-width: 768px) {
+  .demo-user-info {
+    display: none;
+  }
+  
+  .demo-main {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .demo-main {
+    padding-bottom: 20px;
+  }
+}
+
